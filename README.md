@@ -27,7 +27,7 @@ Follow these steps to install the project:
 
 1. **Import functions and initialize `option_market`**
    ```python
-   from bitcoin_pdf import *
+   from main_bitcoin_pdf import*
    option_data_prefix = "btc_eo"
    stock_price_data_prefix = 'bitcoin_10'
    par_yield_curve_prefix = 'daily-'
@@ -54,9 +54,11 @@ Follow these steps to install the project:
 ## Results
 The black dotted curve represents the raw pdf. Depending on the noise in the market, as well as the smoothness level in the IV interpolation, this may have lots of noise. We use Kernel Density estimation to extract a reasonable density from it. I show below that even when the raw btc density is noisy, we can extract some meaningfully realistic density from it without having to go back and oversmooth the IV curve.
 1. **extracting 90 day bitcoin pdfs**
-<img width="720" alt="2021_07_31_2021_10_29" src="https://github.com/user-attachments/assets/beafca25-f51f-4ede-905f-253b61fde950">
+<img width="720" alt="2021_06_26_2021_09_24" src="https://github.com/user-attachments/assets/3134c738-8f4a-41f8-95d6-72c6674a4090">
 
 2. **successful extraction of even "noisy" 90 day bitcoin pdfs**
-<img width="720" alt="2023_12_30_2024_03_29" src="https://github.com/user-attachments/assets/359975ae-cf94-46b0-8144-f415dcd39b23">
+<img width="720" alt="2021_10_02_2021_12_31" src="https://github.com/user-attachments/assets/439018cc-5e2a-4dbd-8916-97e2b8c5da73">
 
+3. **Extraction of 1 day btc pdf**
+<img width="720" alt="2021_06_22_2021_06_23" src="https://github.com/user-attachments/assets/adfbbb3b-2f3a-49a5-ab4b-07a8f29f2dc4">
 
