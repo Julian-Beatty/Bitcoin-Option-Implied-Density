@@ -1,17 +1,9 @@
 # Non-parametric, arbitrage free, robust option implied densities for bitcoin
 This module computes option implied densities for bitcoin options that are traded on Deribit (for now I only support optiondata from optionsDX). Notably, this module aims to compute pdfs with the following desirable qualities. (1) Non-parametric (2) Arbitrage free (3) Robust to market noise, and 'realistic' (4) contains tails and (5) uses all the data.
 I've combined a blend of techniques from the literature, as well as a few of my own invention to create a program that calcualtes a time series of pdfs, without any arbitrary parameterizations from the user. 
-Special thanks to
-@misc{arbitragerepair2020,
-   author = {Samuel N. Cohen and Christoph Reisinger and Sheng Wang},  
-   title = {arbitragerepair},
-   publisher = {GitHub},
-   journal = {GitHub repository},
-   year = {2020},
-   howpublished = {\url{https://github.com/vicaws/arbitragerepair}},
-   note = {DOI: 10.5281/zenodo.5338299}
-}
-
+Special thanks to authors of arbitrage repair
+Samuel N. Cohen and Christoph Reisinger and Sheng Wang
+https://github.com/vicaws/arbitragerepair
 ## Description
 The primary component of this module is the class "Option_Market". The Option_Market class is initialized with variables: 
 
