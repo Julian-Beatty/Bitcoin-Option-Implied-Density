@@ -55,9 +55,9 @@ def SVR_model(option_df,argument_dict,interpolate_large = True):
 
 
     param_dist= {
-    'C': [0.1, 0.5, 1, 5],
-    'gamma': [0.1, 0.01, 0.05, 0.001,0.005,0.0001],
-    'epsilon': [0.01, 0.1, 0.2],
+    'C': [1, 5,10,15],
+    'gamma': [0.1,0.5,1,5,10],
+    'epsilon': [0.00005,0.0001,0.005,0.01, 0.1, 0.2],
     'kernel': ['rbf', 'linear', 'poly']  # trying different kernel types}
     }
 
@@ -73,6 +73,7 @@ def SVR_model(option_df,argument_dict,interpolate_large = True):
     # Get the best model
     best_model = randomized_search.best_estimator_
 
+    #pdb.set_trace()
     
 
     ##Define interpolation grid
